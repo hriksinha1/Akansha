@@ -1,4 +1,5 @@
 import { WorkItem } from '../types';
+import { akanshaImages } from './images';
 
 export const workItems: WorkItem[] = [
   {
@@ -8,7 +9,7 @@ export const workItems: WorkItem[] = [
     date: "2026",
     subtitle: "On-camera presence & lifestyle aesthetic",
     description: "A refined visual series exploring contemporary architecture, natural ambient daylight, and understated elegance.",
-    image: "/images/akansha/akansha-hero.jpg",
+    image: akanshaImages.hero,
     tags: ["Visual Storytelling", "On-Camera", "Lifestyle"],
     link: "#collaborate"
   },
@@ -19,7 +20,7 @@ export const workItems: WorkItem[] = [
     date: "2026",
     subtitle: "National Media Forum with ABP Network",
     description: "Documented presence across high-impact media gathering in Mumbai, alongside leading cultural and industry voices.",
-    image: "/images/akansha/akansha-ideas-of-india.jpg",
+    image: akanshaImages.ideasOfIndia,
     tags: ["National Forum", "Public Presence", "ABP Network"],
     link: "#presence"
   },
@@ -30,19 +31,19 @@ export const workItems: WorkItem[] = [
     date: "2026",
     subtitle: "On-camera profile & contemporary wardrobe",
     description: "An on-camera studio feature in bold royal blue peplum tailoring and modern timber interior.",
-    image: "/images/akansha/akansha-blue-portrait.jpg",
+    image: akanshaImages.about,
     tags: ["On-Camera", "Studio Interior", "Broadcast Format"],
     link: "https://www.instagram.com/akansha_sharad_renuse/"
   },
   {
     id: "work-04",
-    title: "Visual Direction & Content",
-    category: "Creative Project",
+    title: "Editorial Portfolio & Personal Narrative",
+    category: "Brand Work",
     date: "2026",
-    subtitle: "Curated lifestyle & personal brand narrative",
-    description: "Developing consistent, polished visual content and authentic creative collaborations.",
-    image: "/images/akansha/akansha-gallery-01.jpg",
-    tags: ["Creative Direction", "Narrative", "Personal Brand"],
+    subtitle: "Modern personal brand & creative direction",
+    description: "Curated editorial frames reflecting confidence, timeless refinement, and distinctive personal branding.",
+    image: akanshaImages.gallery01,
+    tags: ["Brand Identity", "Editorial", "Creative Direction"],
     link: "#collaborate"
   }
 ];

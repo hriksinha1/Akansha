@@ -1,4 +1,5 @@
 import { AppearanceItem } from '../types';
+import { akanshaImages } from './images';
 
 export const appearances: AppearanceItem[] = [
   {
@@ -12,7 +13,7 @@ export const appearances: AppearanceItem[] = [
     headline: "Moments beyond the feed.",
     subheading: "Where conversations, people and experiences come together.",
     description: "At the prestigious Ideas of India Summit 3.0 convened by ABP Network—bringing together national leaders, cultural icons, thinkers, and industry innovators to reflect on the evolving vision of modern India. A distinctive public moment bridging creative presence with intellectual dialogue.",
-    image: "/images/akansha/akansha-ideas-of-india.jpg",
+    image: akanshaImages.ideasOfIndia,
     altText: "Akansha Sharad Renuse at the ABP Network Ideas of India Summit 3.0 stage wearing a tailored yellow blazer and black trousers",
     badgeText: "Public Appearance",
     highlights: [

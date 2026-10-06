@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useState } from 'react';
+import { akanshaImages } from '../data/images';
 
 interface MediaSlotMap {
   hero: string;
-  portrait: string;
-  event: string;
-  gallery01: string;
+  about: string;
+  ideasOfIndia: string;
 }
 
 interface MediaContextType {
@@ -14,10 +14,9 @@ interface MediaContextType {
 }
 
 const defaultMedia: MediaSlotMap = {
-  hero: '/images/akansha/akansha-hero.jpg',
-  portrait: '/images/akansha/akansha-blue-portrait.jpg',
-  event: '/images/akansha/akansha-ideas-of-india.jpg',
-  gallery01: '/images/akansha/akansha-gallery-01.jpg',
+  hero: akanshaImages.hero,
+  about: akanshaImages.about,
+  ideasOfIndia: akanshaImages.ideasOfIndia,
 };
 
 const MediaContext = createContext<MediaContextType | undefined>(undefined);

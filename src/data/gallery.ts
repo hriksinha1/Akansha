@@ -1,4 +1,5 @@
 import { GalleryItem } from '../types';
+import { akanshaImages } from './images';
 
 export const galleryItems: GalleryItem[] = [
   {
@@ -6,7 +7,7 @@ export const galleryItems: GalleryItem[] = [
     title: "Poolside Terrace & Contemporary Architecture",
     category: "Editorial Portrait",
     aspect: "tall",
-    image: "/images/akansha/akansha-hero.jpg",
+    image: akanshaImages.hero,
     altText: "Akansha Sharad Renuse in a light olive puff-sleeve top beside a swimming pool terrace with modern cabanas",
     location: "Rooftop Terrace",
     year: "2026",
@@ -18,7 +19,7 @@ export const galleryItems: GalleryItem[] = [
     title: "Ideas of India Summit 3.0 · ABP Network",
     category: "Public Appearance",
     aspect: "tall",
-    image: "/images/akansha/akansha-ideas-of-india.jpg",
+    image: akanshaImages.ideasOfIndia,
     altText: "Akansha Sharad Renuse at the ABP Network Ideas of India Summit 3.0 backdrop in a tailored yellow blazer and black trousers",
     location: "ABP Network Summit, Mumbai",
     year: "2026",
@@ -30,7 +31,7 @@ export const galleryItems: GalleryItem[] = [
     title: "Architectural Wood-Panelling & Studio Setting",
     category: "Editorial Portrait",
     aspect: "portrait",
-    image: "/images/akansha/akansha-blue-portrait.jpg",
+    image: akanshaImages.about,
     altText: "Akansha Sharad Renuse in a royal blue collared peplum top in a modern architectural wood-panelled interior",
     location: "Studio Interior",
     year: "2026",
@@ -38,15 +39,15 @@ export const galleryItems: GalleryItem[] = [
     featured: true
   },
   {
-    id: "gal-gallery-01",
-    title: "On-Camera Narrative & Visual Presence",
-    category: "Contemporary Profile",
+    id: "gal-studio-portrait",
+    title: "Editorial Portfolio & Personal Profile",
+    category: "Editorial Portrait",
     aspect: "portrait",
-    image: "/images/akansha/akansha-gallery-01.jpg",
-    altText: "Akansha Sharad Renuse on-camera visual narrative",
-    location: "Mumbai",
+    image: akanshaImages.gallery01,
+    altText: "Akansha Sharad Renuse editorial portrait in contemporary styling",
+    location: "Studio Setting",
     year: "2026",
-    caption: "A personal space for work, stories, and meaningful collaborations.",
+    caption: "A distinct on-camera presence capturing modern elegance and personal brand authenticity.",
     featured: true
   }
 ];

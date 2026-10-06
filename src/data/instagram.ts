@@ -1,4 +1,5 @@
 import { InstagramPost } from '../types';
+import { akanshaImages } from './images';
 
 export const instagramPosts: InstagramPost[] = [
   {
@@ -6,7 +7,7 @@ export const instagramPosts: InstagramPost[] = [
     caption: "On set today — terrace breezes, clear skies, and capturing moments that connect. ✨",
     likes: "curated",
     date: "Recent",
-    image: "/images/akansha/akansha-hero.jpg",
+    image: akanshaImages.hero,
     url: "https://www.instagram.com/akansha_sharad_renuse/",
     category: "Personal & Media"
   },
@@ -15,7 +16,7 @@ export const instagramPosts: InstagramPost[] = [
     caption: "Moments of learning, perspective, and dialogue at ABP Network Ideas of India Summit 3.0. 🇮🇳",
     likes: "curated",
     date: "Archive",
-    image: "/images/akansha/akansha-ideas-of-india.jpg",
+    image: akanshaImages.ideasOfIndia,
     url: "https://www.instagram.com/akansha_sharad_renuse/",
     category: "Public Appearance"
   },
@@ -24,18 +25,18 @@ export const instagramPosts: InstagramPost[] = [
     caption: "Architectural warmth, blue silhouettes, and creative conversations behind the lens.",
     likes: "curated",
     date: "Archive",
-    image: "/images/akansha/akansha-blue-portrait.jpg",
+    image: akanshaImages.about,
     url: "https://www.instagram.com/akansha_sharad_renuse/",
     category: "Creative & Studio"
   },
   {
     id: "ig-04",
-    caption: "Visual storytelling and spaces that inspire living — quiet light and thoughtful corners.",
+    caption: "Presence, creative direction, and building timeless brand stories.",
     likes: "curated",
     date: "Archive",
-    image: "/images/akansha/akansha-gallery-01.jpg",
-    url: "https://www.instagram.com/realestatewithakansha/",
-    category: "Real Estate & Spaces"
+    image: akanshaImages.gallery01,
+    url: "https://www.instagram.com/akansha_sharad_renuse/",
+    category: "Editorial & Styling"
   }
 ];
 
