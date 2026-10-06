@@ -5,6 +5,7 @@ interface EditorialImageProps extends React.ImgHTMLAttributes<HTMLImageElement> 
   caption?: string;
   badge?: string;
   aspectRatioClass?: string;
+  objectPositionClass?: string;
 }
 
 export const EditorialImage: React.FC<EditorialImageProps> = ({
@@ -14,6 +15,7 @@ export const EditorialImage: React.FC<EditorialImageProps> = ({
   fallbackType = 'general',
   badge,
   aspectRatioClass = 'aspect-[3/4]',
+  objectPositionClass,
   ...rest
 }) => {
   const [hasError, setHasError] = useState(false);
@@ -23,6 +25,17 @@ export const EditorialImage: React.FC<EditorialImageProps> = ({
     setHasError(false);
     setIsLoaded(false);
   }, [src]);
+
+  // Art-directed default object-position based on subject context
+  const defaultPosition =
+    objectPositionClass ||
+    (fallbackType === 'pool'
+      ? 'object-[center_15%]'
+      : fallbackType === 'summit'
+      ? 'object-[center_20%]'
+      : fallbackType === 'portrait'
+      ? 'object-[center_15%]'
+      : 'object-center');
 
   return (
     <div className={`relative overflow-hidden bg-[#EFECE6] ${aspectRatioClass} w-full group select-none`}>
@@ -34,7 +47,7 @@ export const EditorialImage: React.FC<EditorialImageProps> = ({
           loading="lazy"
           onLoad={() => setIsLoaded(true)}
           onError={() => setHasError(true)}
-          className={`w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-103 ${
+          className={`w-full h-full object-cover ${defaultPosition} transition-all duration-700 ease-out group-hover:scale-103 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           } ${className}`}
           {...rest}

@@ -9,7 +9,7 @@ export const ecosystemBrands: Record<string, EcosystemBrand> = {
     category: "Property & Architectural Spaces",
     headline: "Exploring real estate through a more personal lens.",
     description: "Bringing aesthetic sensibility, location appreciation, and lifestyle storytelling to properties and residential spaces. A dedicated space for curated design perspectives and living environments.",
-    image: "/src/assets/images/editorial_studio_arch_1791265071829.jpg",
+    image: "/images/akansha/akansha-hero.jpg",
     ctaText: "Visit Real Estate Profile",
     highlights: [
       "Architectural living spaces",
@@ -25,7 +25,7 @@ export const ecosystemBrands: Record<string, EcosystemBrand> = {
     category: "Media Production & Creative Curation",
     headline: "Stories, media perspectives & creative collaboration.",
     description: "A collaborative touchpoint exploring media narratives, digital creative initiatives, and visual formats designed to spark genuine conversation.",
-    image: "/src/assets/images/campaign_media_stage_1791265102202.jpg",
+    image: "/images/akansha/akansha-blue-portrait.jpg",
     ctaText: "Explore Media",
     highlights: [
       "Media storytelling",
@@ -41,7 +41,7 @@ export const ecosystemBrands: Record<string, EcosystemBrand> = {
     category: "Regional Heritage & Related Brand",
     headline: "Heritage, authentic roots & regional pride.",
     description: "A related brand endeavor highlighting the richness, authentic flavors, and traditional heritage of the Konkan region.",
-    image: "/src/assets/images/campaign_studio_warm_1791265091994.jpg",
+    image: "/images/akansha/akansha-ideas-of-india.jpg",
     ctaText: "View Kokan Quality",
     highlights: [
       "Regional authenticity",

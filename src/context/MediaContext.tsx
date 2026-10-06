@@ -5,8 +5,6 @@ interface MediaSlotMap {
   portrait: string;
   event: string;
   gallery01: string;
-  gallery02: string;
-  gallery03: string;
 }
 
 interface MediaContextType {
@@ -16,12 +14,10 @@ interface MediaContextType {
 }
 
 const defaultMedia: MediaSlotMap = {
-  hero: '/images/akansha/hero.jpg',
-  portrait: '/images/akansha/portrait.jpg',
-  event: '/images/akansha/ideas-of-india.jpg',
-  gallery01: '/images/akansha/gallery-01.jpg',
-  gallery02: '/images/akansha/gallery-02.jpg',
-  gallery03: '/images/akansha/gallery-03.jpg',
+  hero: '/images/akansha/akansha-hero.jpg',
+  portrait: '/images/akansha/akansha-blue-portrait.jpg',
+  event: '/images/akansha/akansha-ideas-of-india.jpg',
+  gallery01: '/images/akansha/akansha-gallery-01.jpg',
 };
 
 const MediaContext = createContext<MediaContextType | undefined>(undefined);

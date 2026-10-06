@@ -28,14 +28,14 @@ export const EditorialGallery: React.FC = () => {
         <SectionHeading
           eyebrow="Visual Archive"
           title="Curated Gallery"
-          subtitle="An intentional collection of documented public appearances, on-camera narratives, and architectural spaces."
+          subtitle="Documented public appearances, terrace settings, and on-camera editorial portraits."
         />
 
-        {/* Asymmetric Editorial Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+        {/* Asymmetric Editorial Grid (Pure Real Photography) */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           {/* Item 1: Poolside Terrace Feature (Col 1-7, Akansha Light Olive Top) */}
           <div
-            className="md:col-span-7 bg-white p-3 border border-[#DDD8D0] group cursor-pointer transition-all duration-300 hover:border-[#171717]"
+            className="md:col-span-7 bg-white p-3 sm:p-4 border border-[#DDD8D0] group cursor-pointer transition-all duration-300 hover:border-[#171717]"
             onClick={() => openLightbox(0)}
           >
             <div className="relative overflow-hidden">
@@ -46,14 +46,14 @@ export const EditorialGallery: React.FC = () => {
                 aspectRatioClass="aspect-[4/5]"
                 className="w-full object-cover object-top transition-transform duration-700 group-hover:scale-103"
               />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="p-3 bg-white/90 text-[#171717] rounded-none text-xs uppercase tracking-widest font-semibold flex items-center gap-1.5 shadow-md">
+              <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span className="p-3 bg-white/95 text-[#171717] text-xs uppercase tracking-widest font-semibold flex items-center gap-1.5 shadow-md">
                   <Maximize2 className="w-3.5 h-3.5" />
-                  View Full
+                  View Fullscreen
                 </span>
               </div>
             </div>
-            <div className="pt-3 px-1 flex items-center justify-between text-xs text-[#6F6A64]">
+            <div className="pt-4 px-1 flex items-center justify-between text-xs text-[#6F6A64]">
               <span className="font-serif text-base text-[#171717]">{galleryItems[0].title}</span>
               <span className="text-[10px] uppercase tracking-wider text-[#7A2032] font-semibold">
                 {galleryItems[0].category}
@@ -63,7 +63,7 @@ export const EditorialGallery: React.FC = () => {
 
           {/* Item 2: ABP Ideas of India Summit (Col 8-12, Akansha Yellow Blazer) */}
           <div
-            className="md:col-span-5 bg-white p-3 border border-[#DDD8D0] group cursor-pointer transition-all duration-300 hover:border-[#171717]"
+            className="md:col-span-5 bg-white p-3 sm:p-4 border border-[#DDD8D0] group cursor-pointer transition-all duration-300 hover:border-[#171717]"
             onClick={() => openLightbox(1)}
           >
             <div className="relative overflow-hidden">
@@ -74,14 +74,14 @@ export const EditorialGallery: React.FC = () => {
                 aspectRatioClass="aspect-[3/4]"
                 className="w-full object-cover object-center transition-transform duration-700 group-hover:scale-103"
               />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="p-3 bg-white/90 text-[#171717] rounded-none text-xs uppercase tracking-widest font-semibold flex items-center gap-1.5 shadow-md">
+              <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span className="p-3 bg-white/95 text-[#171717] text-xs uppercase tracking-widest font-semibold flex items-center gap-1.5 shadow-md">
                   <Maximize2 className="w-3.5 h-3.5" />
-                  View Full
+                  View Fullscreen
                 </span>
               </div>
             </div>
-            <div className="pt-3 px-1 flex items-center justify-between text-xs text-[#6F6A64]">
+            <div className="pt-4 px-1 flex items-center justify-between text-xs text-[#6F6A64]">
               <span className="font-serif text-base text-[#171717]">{galleryItems[1].title}</span>
               <span className="text-[10px] uppercase tracking-wider text-[#7A2032] font-semibold">
                 {galleryItems[1].category}
@@ -89,9 +89,9 @@ export const EditorialGallery: React.FC = () => {
             </div>
           </div>
 
-          {/* Item 3: Studio Interior Portrait (Col 1-5, Akansha Blue Outfit) */}
+          {/* Item 3: Studio Interior Portrait (Col 1-6, Akansha Blue Outfit) */}
           <div
-            className="md:col-span-5 bg-white p-3 border border-[#DDD8D0] group cursor-pointer transition-all duration-300 hover:border-[#171717]"
+            className="md:col-span-6 bg-white p-3 sm:p-4 border border-[#DDD8D0] group cursor-pointer transition-all duration-300 hover:border-[#171717]"
             onClick={() => openLightbox(2)}
           >
             <div className="relative overflow-hidden">
@@ -102,14 +102,14 @@ export const EditorialGallery: React.FC = () => {
                 aspectRatioClass="aspect-[3/4]"
                 className="w-full object-cover object-top transition-transform duration-700 group-hover:scale-103"
               />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="p-3 bg-white/90 text-[#171717] rounded-none text-xs uppercase tracking-widest font-semibold flex items-center gap-1.5 shadow-md">
+              <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span className="p-3 bg-white/95 text-[#171717] text-xs uppercase tracking-widest font-semibold flex items-center gap-1.5 shadow-md">
                   <Maximize2 className="w-3.5 h-3.5" />
-                  View Full
+                  View Fullscreen
                 </span>
               </div>
             </div>
-            <div className="pt-3 px-1 flex items-center justify-between text-xs text-[#6F6A64]">
+            <div className="pt-4 px-1 flex items-center justify-between text-xs text-[#6F6A64]">
               <span className="font-serif text-base text-[#171717]">{galleryItems[2].title}</span>
               <span className="text-[10px] uppercase tracking-wider text-[#7A2032] font-semibold">
                 {galleryItems[2].category}
@@ -117,86 +117,30 @@ export const EditorialGallery: React.FC = () => {
             </div>
           </div>
 
-          {/* Item 4: Architectural Light (Col 6-12) */}
+          {/* Item 4: Contemporary Narrative Frame (Col 7-12) */}
           <div
-            className="md:col-span-7 bg-white p-3 border border-[#DDD8D0] group cursor-pointer transition-all duration-300 hover:border-[#171717]"
+            className="md:col-span-6 bg-white p-3 sm:p-4 border border-[#DDD8D0] group cursor-pointer transition-all duration-300 hover:border-[#171717]"
             onClick={() => openLightbox(3)}
           >
             <div className="relative overflow-hidden">
               <EditorialImage
                 src={galleryItems[3].image}
                 alt={galleryItems[3].altText}
-                fallbackType="studio"
-                aspectRatioClass="aspect-[16/10]"
-                className="w-full object-cover transition-transform duration-700 group-hover:scale-103"
+                fallbackType="pool"
+                aspectRatioClass="aspect-[3/4]"
+                className="w-full object-cover object-top transition-transform duration-700 group-hover:scale-103"
               />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="p-3 bg-white/90 text-[#171717] rounded-none text-xs uppercase tracking-widest font-semibold flex items-center gap-1.5 shadow-md">
+              <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span className="p-3 bg-white/95 text-[#171717] text-xs uppercase tracking-widest font-semibold flex items-center gap-1.5 shadow-md">
                   <Maximize2 className="w-3.5 h-3.5" />
-                  View Full
+                  View Fullscreen
                 </span>
               </div>
             </div>
-            <div className="pt-3 px-1 flex items-center justify-between text-xs text-[#6F6A64]">
+            <div className="pt-4 px-1 flex items-center justify-between text-xs text-[#6F6A64]">
               <span className="font-serif text-base text-[#171717]">{galleryItems[3].title}</span>
               <span className="text-[10px] uppercase tracking-wider text-[#7A2032] font-semibold">
                 {galleryItems[3].category}
-              </span>
-            </div>
-          </div>
-
-          {/* Item 5: Broadcast Stage (Col 1-6) */}
-          <div
-            className="md:col-span-6 bg-white p-3 border border-[#DDD8D0] group cursor-pointer transition-all duration-300 hover:border-[#171717]"
-            onClick={() => openLightbox(4)}
-          >
-            <div className="relative overflow-hidden">
-              <EditorialImage
-                src={galleryItems[4].image}
-                alt={galleryItems[4].altText}
-                fallbackType="studio"
-                aspectRatioClass="aspect-[16/10]"
-                className="w-full object-cover transition-transform duration-700 group-hover:scale-103"
-              />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="p-2.5 bg-white/90 text-[#171717] rounded-none text-[11px] uppercase tracking-widest font-semibold flex items-center gap-1 shadow-md">
-                  <Maximize2 className="w-3 h-3" />
-                  View Full
-                </span>
-              </div>
-            </div>
-            <div className="pt-3 px-1 flex items-center justify-between text-xs text-[#6F6A64]">
-              <span className="font-serif text-sm text-[#171717] truncate">{galleryItems[4].title}</span>
-              <span className="text-[9px] uppercase tracking-wider text-[#7A2032] font-semibold ml-2">
-                {galleryItems[4].category}
-              </span>
-            </div>
-          </div>
-
-          {/* Item 6: Organic Textures & Still Life (Col 7-12) */}
-          <div
-            className="md:col-span-6 bg-white p-3 border border-[#DDD8D0] group cursor-pointer transition-all duration-300 hover:border-[#171717]"
-            onClick={() => openLightbox(5)}
-          >
-            <div className="relative overflow-hidden">
-              <EditorialImage
-                src={galleryItems[5].image}
-                alt={galleryItems[5].altText}
-                fallbackType="studio"
-                aspectRatioClass="aspect-[16/10]"
-                className="w-full object-cover transition-transform duration-700 group-hover:scale-103"
-              />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="p-2.5 bg-white/90 text-[#171717] rounded-none text-[11px] uppercase tracking-widest font-semibold flex items-center gap-1 shadow-md">
-                  <Maximize2 className="w-3 h-3" />
-                  View Full
-                </span>
-              </div>
-            </div>
-            <div className="pt-3 px-1 flex items-center justify-between text-xs text-[#6F6A64]">
-              <span className="font-serif text-sm text-[#171717] truncate">{galleryItems[5].title}</span>
-              <span className="text-[9px] uppercase tracking-wider text-[#7A2032] font-semibold ml-2">
-                {galleryItems[5].category}
               </span>
             </div>
           </div>

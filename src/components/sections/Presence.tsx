@@ -1,11 +1,13 @@
 import React from 'react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { EditorialImage } from '../ui/EditorialImage';
+import { useMedia } from '../../context/MediaContext';
 import { Building2, Calendar, MapPin, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { appearances } from '../../data/appearances';
 
 export const Presence: React.FC = () => {
   const item = appearances[0];
+  const { images } = useMedia();
 
   return (
     <section id="presence" className="py-24 md:py-36 bg-[#F4EFEA] border-b border-[#DDD8D0]">
@@ -19,12 +21,12 @@ export const Presence: React.FC = () => {
         {/* Editorial Feature Story Card */}
         <div className="bg-[#FAF8F5] border border-[#DDD8D0] p-6 sm:p-10 lg:p-12 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Visual Frame: ABP Network / Ideas of India Summit 3.0 Photo */}
+            {/* Visual Frame: Real ABP Network / Ideas of India Summit 3.0 Photo */}
             <div className="lg:col-span-6">
               <div className="relative">
                 <div className="p-3 bg-white border border-[#DDD8D0]">
                   <EditorialImage
-                    src="/images/akansha/ideas-of-india.jpg"
+                    src={images.event}
                     alt={item.altText}
                     fallbackType="summit"
                     badge="Ideas of India Summit 3.0"

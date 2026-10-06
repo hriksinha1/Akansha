@@ -2,10 +2,13 @@ import React from 'react';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { profile } from '../../data/profile';
 import { EditorialImage } from '../ui/EditorialImage';
+import { useMedia } from '../../context/MediaContext';
 
 export const Hero: React.FC = () => {
+  const { images } = useMedia();
+
   return (
-    <section className="relative min-h-[95vh] flex items-center pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden border-b border-[#DDD8D0]">
+    <section className="relative min-h-[92vh] flex items-center pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden border-b border-[#DDD8D0]">
       {/* Background Subtle Editorial Grid Texture */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.03]"
@@ -28,7 +31,7 @@ export const Hero: React.FC = () => {
               </span>
               <span className="h-px w-10 bg-[#7A2032]/40" aria-hidden="true" />
               <span className="text-[11px] tracking-[0.2em] uppercase text-[#6F6A64]">
-                Media · Creator · Professional
+                Personal Brand & Media
               </span>
             </div>
 
@@ -41,7 +44,7 @@ export const Hero: React.FC = () => {
 
             {/* Supporting Editorial Paragraph */}
             <p className="text-base sm:text-lg md:text-xl text-[#6F6A64] font-light leading-relaxed max-w-xl mb-10">
-              {profile.supportingCopy}
+              A personal space for creative work, professional moments, conversations and meaningful collaborations.
             </p>
 
             {/* Primary & Secondary Actions */}
@@ -50,7 +53,7 @@ export const Hero: React.FC = () => {
                 href="#work"
                 className="py-4 px-8 bg-[#171717] text-[#F7F4EF] hover:bg-[#7A2032] transition-colors duration-300 uppercase tracking-[0.16em] text-xs font-semibold text-center inline-flex items-center justify-center gap-2"
               >
-                <span>Explore Work</span>
+                <span>Explore My Work</span>
                 <ArrowDown className="w-3.5 h-3.5" />
               </a>
 
@@ -58,7 +61,7 @@ export const Hero: React.FC = () => {
                 href="#collaborate"
                 className="py-4 px-8 bg-transparent text-[#171717] hover:bg-[#171717] hover:text-[#F7F4EF] border border-[#171717] transition-all duration-300 uppercase tracking-[0.16em] text-xs font-semibold text-center inline-flex items-center justify-center gap-2"
               >
-                <span>Work With Me</span>
+                <span>Let's Collaborate</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -81,7 +84,7 @@ export const Hero: React.FC = () => {
                 <span className="text-[#8C8379] uppercase tracking-wider block text-[10px] mb-1">
                   Status
                 </span>
-                <span className="text-[#7A2032] font-medium">Open for Select Projects</span>
+                <span className="text-[#7A2032] font-medium">Available for Select Projects</span>
               </div>
             </div>
           </div>
@@ -92,8 +95,8 @@ export const Hero: React.FC = () => {
               {/* Outer decorative framing with hairline borders */}
               <div className="relative p-2 sm:p-3 bg-white border border-[#DDD8D0] shadow-sm">
                 <EditorialImage
-                  src="/images/akansha/hero.jpg"
-                  alt="Akansha Sharad Renuse in light olive outfit beside the swimming pool terrace"
+                  src={images.hero}
+                  alt="Akansha Sharad Renuse in a light olive outfit beside a swimming pool terrace"
                   fallbackType="pool"
                   badge="Cover Portrait"
                   aspectRatioClass="aspect-[4/5] sm:aspect-[3/4]"
