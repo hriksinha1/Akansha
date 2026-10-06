@@ -3,6 +3,10 @@ export interface ProfileConfig {
   fullName: string;
   title: string;
   tagline: string;
+  headline: string;
+  supportingCopy: string;
+  statement: string;
+  statementSub: string;
   bioIntro: string;
   bioParagraph1: string;
   bioParagraph2: string;
@@ -11,8 +15,34 @@ export interface ProfileConfig {
   availability: string[];
   instagramHandle: string;
   instagramUrl: string;
+  realEstateInstagram: string;
+  mediaInstagram: string;
+  kokanInstagram: string;
   contactEmail: string;
-  representedBy?: string;
+}
+
+export interface AreaOfWork {
+  id: string;
+  number: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  tags: string[];
+  link?: string;
+  linkText?: string;
+}
+
+export interface EcosystemBrand {
+  id: string;
+  title: string;
+  handle: string;
+  url: string;
+  category: string;
+  headline: string;
+  description: string;
+  image: string;
+  ctaText: string;
+  highlights: string[];
 }
 
 export interface AppearanceItem {
@@ -23,6 +53,8 @@ export interface AppearanceItem {
   context: string;
   location: string;
   date: string;
+  headline: string;
+  subheading: string;
   description: string;
   image: string;
   altText: string;
@@ -30,16 +62,16 @@ export interface AppearanceItem {
   highlights: string[];
 }
 
-export interface ProjectItem {
+export interface WorkItem {
   id: string;
   title: string;
-  category: 'Campaign' | 'Brand Work' | 'Events' | 'Media' | 'Creative Direction';
-  year: string;
+  category: string;
+  date: string;
   subtitle: string;
   description: string;
   image: string;
   tags: string[];
-  featured?: boolean;
+  link?: string;
 }
 
 export interface GalleryItem {
@@ -52,6 +84,7 @@ export interface GalleryItem {
   location?: string;
   year: string;
   caption: string;
+  featured?: boolean;
 }
 
 export interface InstagramPost {
@@ -61,13 +94,13 @@ export interface InstagramPost {
   date: string;
   image: string;
   url: string;
+  category?: string;
 }
 
 export interface ContactFormData {
   name: string;
   email: string;
   company: string;
-  projectType: string;
-  budgetRange?: string;
+  opportunityType: string;
   message: string;
 }

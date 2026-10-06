@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 interface MediaSlotMap {
   hero: string;
@@ -6,6 +6,7 @@ interface MediaSlotMap {
   event: string;
   gallery01: string;
   gallery02: string;
+  gallery03: string;
 }
 
 interface MediaContextType {
@@ -16,10 +17,11 @@ interface MediaContextType {
 
 const defaultMedia: MediaSlotMap = {
   hero: '/images/akansha/hero.jpg',
-  portrait: '/images/akansha/portrait-01.jpg',
-  event: '/images/akansha/event-01.jpg',
+  portrait: '/images/akansha/portrait.jpg',
+  event: '/images/akansha/ideas-of-india.jpg',
   gallery01: '/images/akansha/gallery-01.jpg',
   gallery02: '/images/akansha/gallery-02.jpg',
+  gallery03: '/images/akansha/gallery-03.jpg',
 };
 
 const MediaContext = createContext<MediaContextType | undefined>(undefined);

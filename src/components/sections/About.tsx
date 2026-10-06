@@ -2,37 +2,34 @@ import React from 'react';
 import { profile } from '../../data/profile';
 import { SectionHeading } from '../ui/SectionHeading';
 import { EditorialImage } from '../ui/EditorialImage';
-import { useMedia } from '../../context/MediaContext';
 import { ArrowUpRight } from 'lucide-react';
 
 export const About: React.FC = () => {
-  const { images } = useMedia();
-
   return (
     <section id="about" className="py-24 md:py-36 bg-[#F7F4EF] border-b border-[#DDD8D0]">
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Art-Directed Photograph */}
+          {/* Left Column: Art-Directed Photograph (Akansha's Blue Outfit in Wood-Panel Setting) */}
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative">
               <div className="p-3 bg-white border border-[#DDD8D0] shadow-sm">
                 <EditorialImage
-                  src={images.portrait}
-                  alt="Akansha Sharad Renuse in blue attire"
+                  src="/images/akansha/portrait.jpg"
+                  alt="Akansha Sharad Renuse in a royal blue collared peplum top in a modern wood-paneled interior"
                   fallbackType="portrait"
                   badge="Profile"
                   aspectRatioClass="aspect-[3/4]"
-                  className="w-full object-cover object-center"
+                  className="w-full object-cover object-top"
                 />
                 <div className="pt-3 px-1 flex items-center justify-between text-[11px] text-[#6F6A64]">
-                  <span className="font-serif italic text-[#171717]">Akansha Sharad Renuse</span>
+                  <span className="font-serif italic text-[#171717]">{profile.fullName}</span>
                   <span className="uppercase tracking-widest text-[9px] text-[#8C8379]">
                     {profile.location}
                   </span>
                 </div>
               </div>
 
-              {/* Offset border effect */}
+              {/* Offset border accent */}
               <div
                 className="hidden sm:block absolute -top-4 -left-4 w-full h-full border border-[#DDD8D0] pointer-events-none -z-10"
                 aria-hidden="true"
@@ -43,13 +40,13 @@ export const About: React.FC = () => {
           {/* Right Column: Editorial Narrative & Metadata */}
           <div className="lg:col-span-7 order-1 lg:order-2">
             <SectionHeading
-              eyebrow="About"
+              eyebrow="Introduction"
               title="Beyond the frame."
               subtitle="An authentic digital identity rooted in poise, modern style, and deliberate collaboration."
             />
 
             <div className="space-y-6 text-base md:text-lg text-[#6F6A64] font-light leading-relaxed mb-10">
-              <p>
+              <p className="text-[#171717] font-normal">
                 {profile.bioIntro}
               </p>
               <p>
@@ -76,7 +73,7 @@ export const About: React.FC = () => {
                   Focus
                 </span>
                 <span className="text-sm text-[#171717] font-medium block">
-                  Media · Brand Work · Creative
+                  Creative / Media / Professional Projects
                 </span>
               </div>
 
@@ -85,7 +82,7 @@ export const About: React.FC = () => {
                   Available For
                 </span>
                 <span className="text-sm text-[#171717] font-medium block">
-                  Campaigns · Summits · Content
+                  Collaborations / Campaigns / Events / Partnerships
                 </span>
               </div>
             </div>

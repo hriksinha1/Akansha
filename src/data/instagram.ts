@@ -3,34 +3,69 @@ import { InstagramPost } from '../types';
 export const instagramPosts: InstagramPost[] = [
   {
     id: "ig-01",
-    caption: "Moments of dialogue and learning at ABP Network Ideas of India Summit 3.0. ✨",
+    caption: "On set today — terrace breezes, clear skies, and capturing moments that connect. ✨",
     likes: "curated",
     date: "Recent",
-    image: "/images/akansha/event-01.jpg",
-    url: "https://www.instagram.com/akansha_sharad_renuse/"
+    image: "/images/akansha/hero.jpg",
+    url: "https://www.instagram.com/akansha_sharad_renuse/",
+    category: "Personal & Media"
   },
   {
     id: "ig-02",
-    caption: "Conversations, energy, and creating frames that connect. Behind the camera today.",
+    caption: "Moments of learning, perspective, and dialogue at ABP Network Ideas of India Summit 3.0. 🇮🇳",
     likes: "curated",
-    date: "Recent",
-    image: "/images/akansha/portrait-01.jpg",
-    url: "https://www.instagram.com/akansha_sharad_renuse/"
+    date: "Archive",
+    image: "/images/akansha/ideas-of-india.jpg",
+    url: "https://www.instagram.com/akansha_sharad_renuse/",
+    category: "Public Appearance"
   },
   {
     id: "ig-03",
-    caption: "Warm neutrals, intentional spaces, and deliberate details. 🤍",
+    caption: "Architectural warmth, blue silhouettes, and creative conversations behind the lens.",
     likes: "curated",
     date: "Archive",
-    image: "/src/assets/images/editorial_studio_arch_1791265071829.jpg",
-    url: "https://www.instagram.com/akansha_sharad_renuse/"
+    image: "/images/akansha/portrait.jpg",
+    url: "https://www.instagram.com/akansha_sharad_renuse/",
+    category: "Creative & Studio"
   },
   {
     id: "ig-04",
-    caption: "On set — lighting, sound, and the art of staying present.",
+    caption: "Spaces that inspire living — quiet light, warm stone, and thoughtful corners.",
     likes: "curated",
     date: "Archive",
-    image: "/src/assets/images/campaign_media_stage_1791265102202.jpg",
-    url: "https://www.instagram.com/akansha_sharad_renuse/"
+    image: "/src/assets/images/editorial_studio_arch_1791265071829.jpg",
+    url: "https://www.instagram.com/realestatewithakansha/",
+    category: "Real Estate & Spaces"
+  }
+];
+
+export const ecosystemProfiles = [
+  {
+    name: "Akansha Sharad Renuse",
+    handle: "akansha_sharad_renuse",
+    tag: "Primary Profile · Personal & Media",
+    url: "https://www.instagram.com/akansha_sharad_renuse/",
+    description: "Curated lifestyle, public appearances, on-camera narratives & personal updates."
+  },
+  {
+    name: "Real Estate With Akansha",
+    handle: "realestatewithakansha",
+    tag: "Property & Spaces",
+    url: "https://www.instagram.com/realestatewithakansha/",
+    description: "Architectural perspectives, property walk-throughs & living spaces."
+  },
+  {
+    name: "MediaJars",
+    handle: "mediajars",
+    tag: "Media & Creative",
+    url: "https://www.instagram.com/mediajars/",
+    description: "Creative media production, format experiments & collaborative storytelling."
+  },
+  {
+    name: "Kokan Quality",
+    handle: "kokan_quality",
+    tag: "Related Heritage Brand",
+    url: "https://www.instagram.com/kokan_quality/",
+    description: "Regional flavors, authentic heritage & culinary traditions from the Konkan coast."
   }
 ];

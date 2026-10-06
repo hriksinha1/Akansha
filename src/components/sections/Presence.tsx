@@ -1,23 +1,22 @@
 import React from 'react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { EditorialImage } from '../ui/EditorialImage';
-import { useMedia } from '../../context/MediaContext';
-import { MapPin, Calendar, Building2, CheckCircle2 } from 'lucide-react';
+import { Building2, Calendar, MapPin, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { appearances } from '../../data/appearances';
 
-export const FeaturedAppearance: React.FC = () => {
+export const Presence: React.FC = () => {
   const item = appearances[0];
-  const { images } = useMedia();
 
   return (
-    <section id="appearances" className="py-24 md:py-36 bg-[#F4EFEA] border-b border-[#DDD8D0]">
+    <section id="presence" className="py-24 md:py-36 bg-[#F4EFEA] border-b border-[#DDD8D0]">
       <div className="editorial-container">
         <SectionHeading
           eyebrow="Public Presence"
-          title="Moments that matter."
-          subtitle="Establishing credibility in distinguished public, industry, and media environments."
+          title={item.headline}
+          subtitle={item.subheading}
         />
 
+        {/* Editorial Feature Story Card */}
         <div className="bg-[#FAF8F5] border border-[#DDD8D0] p-6 sm:p-10 lg:p-12 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Visual Frame: ABP Network / Ideas of India Summit 3.0 Photo */}
@@ -25,7 +24,7 @@ export const FeaturedAppearance: React.FC = () => {
               <div className="relative">
                 <div className="p-3 bg-white border border-[#DDD8D0]">
                   <EditorialImage
-                    src={images.event}
+                    src="/images/akansha/ideas-of-india.jpg"
                     alt={item.altText}
                     fallbackType="summit"
                     badge="Ideas of India Summit 3.0"
@@ -40,7 +39,7 @@ export const FeaturedAppearance: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Subtle decorative framing */}
+                {/* Subtle decorative offset framing */}
                 <div
                   className="hidden sm:block absolute -bottom-3 -right-3 w-full h-full border border-[#DDD8D0] pointer-events-none -z-10"
                   aria-hidden="true"
@@ -76,7 +75,7 @@ export const FeaturedAppearance: React.FC = () => {
               </div>
 
               {/* Event Metadata (No Pills) */}
-              <div className="grid grid-cols-2 gap-4 pt-6 border-t border-[#DDD8D0] text-xs text-[#6F6A64]">
+              <div className="grid grid-cols-2 gap-4 pt-6 border-t border-[#DDD8D0] text-xs text-[#6F6A64] mb-8">
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-[#8C8379]" />
                   <span>{item.location}</span>
@@ -85,6 +84,16 @@ export const FeaturedAppearance: React.FC = () => {
                   <Calendar className="w-4 h-4 text-[#8C8379]" />
                   <span>{item.date}</span>
                 </div>
+              </div>
+
+              <div>
+                <a
+                  href="#collaborate"
+                  className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.16em] font-semibold text-[#171717] hover:text-[#7A2032] transition-colors"
+                >
+                  <span>Inquire for Event Appearances</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>

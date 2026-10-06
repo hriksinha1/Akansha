@@ -10,7 +10,7 @@ export const CollaborationSection: React.FC = () => {
     name: '',
     email: '',
     company: '',
-    projectType: 'Brand Collaboration',
+    opportunityType: 'Brand Collaboration',
     message: '',
   });
 
@@ -24,7 +24,6 @@ export const CollaborationSection: React.FC = () => {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear field-level error on edit
     if (fieldErrors[name]) {
       setFieldErrors((prev) => {
         const updated = { ...prev };
@@ -59,7 +58,7 @@ export const CollaborationSection: React.FC = () => {
       name: '',
       email: '',
       company: '',
-      projectType: 'Brand Collaboration',
+      opportunityType: 'Brand Collaboration',
       message: '',
     });
     setSuccess(false);
@@ -75,19 +74,19 @@ export const CollaborationSection: React.FC = () => {
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
               <SectionHeading
-                eyebrow="Get In Touch"
-                title="Let's create something meaningful."
-                subtitle="For brand partnerships, curated campaigns, public appearances, and media projects, let's connect."
+                eyebrow="Inquiries & Partnerships"
+                title="Let's create something worth remembering."
+                subtitle="For collaborations, campaigns, media opportunities, creative projects and professional enquiries, get in touch."
               />
 
               <div className="space-y-6 pt-4 text-sm text-[#6F6A64]">
                 <p className="leading-relaxed">
-                  Every engagement is tailored to align with brand ethos, creative direction, and memorable visual storytelling. Inquiries are reviewed with discretion.
+                  Every project is approached with deliberate aesthetic care, professional communication, and genuine alignment. Inquiries from brands, agencies, and event organizers are welcomed.
                 </p>
 
                 <div className="p-6 bg-white border border-[#DDD8D0] space-y-4">
                   <span className="text-[11px] uppercase tracking-[0.2em] text-[#7A2032] font-semibold block">
-                    Direct Contacts
+                    Direct Reach
                   </span>
 
                   <div className="flex items-center gap-3 text-sm text-[#171717]">
@@ -116,8 +115,8 @@ export const CollaborationSection: React.FC = () => {
             </div>
 
             <div className="pt-8 border-t border-[#DDD8D0] text-xs text-[#8C8379] space-y-1">
-              <span className="block font-medium text-[#171717]">Availability Status</span>
-              <p>Booking selected collaborations and engagements for 2026.</p>
+              <span className="block font-medium text-[#171717]">Schedule & Booking</span>
+              <p>Reviewing opportunities across Mumbai, Pune, and national destinations.</p>
             </div>
           </div>
 
@@ -136,7 +135,7 @@ export const CollaborationSection: React.FC = () => {
                   </h3>
 
                   <p className="text-sm text-[#6F6A64] max-w-md mx-auto leading-relaxed">
-                    Thank you for reaching out, {formData.name || 'there'}. Your inquiry has been received and will be reviewed promptly.
+                    Thank you for reaching out, {formData.name || 'there'}. Your enquiry has been recorded and will be addressed promptly.
                   </p>
 
                   <div className="pt-6">
@@ -221,7 +220,7 @@ export const CollaborationSection: React.FC = () => {
                         htmlFor="company"
                         className="block text-xs uppercase tracking-wider text-[#171717] font-medium mb-2"
                       >
-                        Company / Agency / Brand
+                        Company / Brand / Agency
                       </label>
                       <input
                         type="text"
@@ -229,31 +228,33 @@ export const CollaborationSection: React.FC = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        placeholder="Organization Name"
+                        placeholder="Organization or Individual"
                         className="w-full py-3 px-4 bg-[#FAF8F5] border border-[#DDD8D0] text-sm text-[#171717] focus:outline-none focus:bg-white focus:border-[#171717] transition-colors"
                       />
                     </div>
 
-                    {/* Project Type */}
+                    {/* Opportunity Type */}
                     <div>
                       <label
-                        htmlFor="projectType"
+                        htmlFor="opportunityType"
                         className="block text-xs uppercase tracking-wider text-[#171717] font-medium mb-2"
                       >
-                        Project Type <span className="text-[#7A2032]">*</span>
+                        Opportunity Type <span className="text-[#7A2032]">*</span>
                       </label>
                       <select
-                        id="projectType"
-                        name="projectType"
-                        value={formData.projectType}
+                        id="opportunityType"
+                        name="opportunityType"
+                        value={formData.opportunityType}
                         onChange={handleChange}
                         className="w-full py-3 px-4 bg-[#FAF8F5] border border-[#DDD8D0] text-sm text-[#171717] focus:outline-none focus:bg-white focus:border-[#171717] transition-colors"
                       >
                         <option value="Brand Collaboration">Brand Collaboration</option>
                         <option value="Campaign">Campaign</option>
-                        <option value="Event / Appearance">Event / Appearance</option>
+                        <option value="Media">Media Opportunity</option>
+                        <option value="Event">Event Appearance</option>
                         <option value="Content">Content Project</option>
-                        <option value="Media">Media / Broadcast</option>
+                        <option value="Real Estate">Real Estate Inquiry</option>
+                        <option value="Business">Business Venture</option>
                         <option value="Other">Other Enquiry</option>
                       </select>
                     </div>
@@ -274,7 +275,7 @@ export const CollaborationSection: React.FC = () => {
                       required
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Please outline the campaign objectives, timelines, and specific requirements..."
+                      placeholder="Please share timelines, campaign objectives, or specific details..."
                       className={`w-full py-3 px-4 bg-[#FAF8F5] border text-sm text-[#171717] focus:outline-none focus:bg-white transition-colors ${
                         fieldErrors.message
                           ? 'border-red-400 focus:border-red-500'
@@ -296,7 +297,7 @@ export const CollaborationSection: React.FC = () => {
                       {loading ? (
                         <>
                           <Loader2 className="w-4 h-4 animate-spin" />
-                          <span>Sending Enquiry...</span>
+                          <span>Submitting...</span>
                         </>
                       ) : (
                         <>

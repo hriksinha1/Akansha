@@ -6,17 +6,19 @@ export const appearances: AppearanceItem[] = [
     title: "Ideas of India Summit 3.0",
     organization: "ABP Network",
     edition: "Edition 3.0",
-    context: "Public Appearance & Summit Presence",
+    context: "National Media Forum & Public Presence",
     location: "Mumbai, India",
-    date: "Annual Summit",
-    description: "In attendance at the premier annual summit organized by ABP Network, convening prominent leaders, cultural luminaries, filmmakers, policy thinkers, and industry visionaries to discuss India's evolving national narrative.",
-    image: "/images/akansha/event-01.jpg",
-    altText: "Akansha Sharad Renuse at the ABP Network Ideas of India Summit 3.0 backdrop wearing an elegant yellow tailored blazer",
-    badgeText: "Featured Appearance",
+    date: "Annual National Summit",
+    headline: "Moments beyond the feed.",
+    subheading: "Where conversations, people and experiences come together.",
+    description: "At the prestigious Ideas of India Summit 3.0 convened by ABP Network—bringing together national leaders, cultural icons, thinkers, and industry innovators to reflect on the evolving vision of modern India. A distinctive public moment bridging creative presence with intellectual dialogue.",
+    image: "/images/akansha/ideas-of-india.jpg",
+    altText: "Akansha Sharad Renuse at the ABP Network Ideas of India Summit 3.0 stage wearing a tailored yellow blazer and black trousers",
+    badgeText: "Public Appearance",
     highlights: [
-      "National media & cultural forum",
-      "Premier thought leadership dialogues",
-      "Prominent creative & industry atmosphere"
+      "National media & cultural dialogue platform",
+      "Premier thought-leadership forum",
+      "Documented public presence in Mumbai"
     ]
   }
 ];

@@ -2,21 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { profile } from '../../data/profile';
 
-interface HeaderProps {
-  onNavigateToCollaborate?: () => void;
-}
-
-export const Header: React.FC<HeaderProps> = () => {
+export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 30);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -25,60 +17,59 @@ export const Header: React.FC<HeaderProps> = () => {
 
   const navLinks = [
     { label: 'About', href: '#about' },
-    { label: 'Appearances', href: '#appearances' },
     { label: 'Work', href: '#work' },
+    { label: 'Presence', href: '#presence' },
+    { label: 'Real Estate', href: '#real-estate' },
     { label: 'Gallery', href: '#gallery' },
-    { label: 'Instagram', href: '#instagram' },
-    { label: 'Collaborate', href: '#collaborate' },
   ];
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-400 ${
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#F7F4EF]/90 backdrop-blur-md border-b border-[#DDD8D0]/80 py-3.5 shadow-xs'
-            : 'bg-transparent py-6'
+            ? 'bg-[#F7F4EF]/92 backdrop-blur-md border-b border-[#DDD8D0] py-3 shadow-xs'
+            : 'bg-transparent py-5 sm:py-7'
         }`}
       >
         <div className="editorial-container flex items-center justify-between">
-          {/* Zone 1: Single text element wordmark */}
+          {/* Zone 1: Left Brand Wordmark */}
           <a
             href="#"
             className="group flex flex-col items-start focus:outline-none"
             aria-label="Akansha Sharad Renuse Home"
           >
-            <span className="font-serif text-xl sm:text-2xl font-normal tracking-wide text-[#171717] group-hover:text-[#7A2032] transition-colors">
-              {profile.fullName}
+            <span className="font-serif text-xl sm:text-2xl font-normal tracking-wider text-[#171717] group-hover:text-[#7A2032] transition-colors">
+              {profile.name}
             </span>
-            <span className="text-[10px] tracking-[0.25em] uppercase text-[#6F6A64] -mt-0.5">
-              Portfolio
+            <span className="text-[9px] sm:text-[10px] tracking-[0.25em] uppercase text-[#6F6A64] -mt-0.5">
+              Personal Brand & Media
             </span>
           </a>
 
-          {/* Zone 2: Clean text navigation links (Desktop) */}
+          {/* Zone 2: Center Navigation Links (Desktop) */}
           <nav
-            className="hidden lg:flex items-center gap-8 text-xs tracking-[0.16em] uppercase font-sans text-[#6F6A64]"
+            className="hidden lg:flex items-center gap-9 text-xs tracking-[0.16em] uppercase font-sans text-[#6F6A64]"
             aria-label="Main Navigation"
           >
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="hover:text-[#171717] transition-colors duration-200 py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-[#171717] hover:after:w-full after:transition-all after:duration-300"
+                className="hover:text-[#171717] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-[#171717] hover:after:w-full after:transition-all after:duration-300"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* Zone 3: 1-2 primary actions */}
-          <div className="flex items-center gap-4">
+          {/* Zone 3: Right CTA */}
+          <div className="flex items-center gap-3">
             <a
               href="#collaborate"
-              className="hidden sm:inline-flex items-center gap-1.5 py-2.5 px-5 text-xs uppercase tracking-[0.15em] bg-[#171717] text-[#F7F4EF] hover:bg-[#7A2032] transition-colors duration-300 whitespace-nowrap"
+              className="hidden sm:inline-flex items-center gap-1.5 py-2.5 px-5 text-xs uppercase tracking-[0.16em] bg-[#171717] text-[#F7F4EF] hover:bg-[#7A2032] transition-colors duration-300 whitespace-nowrap"
             >
-              <span>Let's Work Together</span>
+              <span>Let's Collaborate</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
 
@@ -105,11 +96,11 @@ export const Header: React.FC<HeaderProps> = () => {
           {/* Top Bar with Brand & Close Button */}
           <div className="flex items-center justify-between border-b border-white/10 pb-5">
             <div>
-              <span className="font-serif text-2xl text-[#F7F4EF] block">
+              <span className="font-serif text-2xl text-[#F7F4EF] block tracking-wide">
                 {profile.fullName}
               </span>
               <span className="text-[10px] tracking-[0.25em] uppercase text-[#B3AAA0]">
-                Personal Brand
+                Personal Brand · Media · Real Estate
               </span>
             </div>
             <button
@@ -148,7 +139,7 @@ export const Header: React.FC<HeaderProps> = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 py-4 bg-[#F7F4EF] text-[#171717] uppercase tracking-[0.18em] text-xs font-semibold hover:bg-[#C5A059] transition-colors"
             >
-              <span>Start an Enquiry</span>
+              <span>Let's Collaborate</span>
               <ArrowUpRight className="w-4 h-4" />
             </a>
 
@@ -159,7 +150,7 @@ export const Header: React.FC<HeaderProps> = () => {
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
-                Instagram @{profile.instagramHandle}
+                @{profile.instagramHandle}
               </a>
               <span>{profile.location}</span>
             </div>
